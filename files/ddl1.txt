@@ -1,0 +1,22 @@
+CREATE TABLE `demo_table` (
+`id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'id',
+`project_id` varchar(100) NOT NULL COMMENT 'project_id',
+`shop_id` varchar(50) NOT NULL COMMENT 'shop_id',
+`contract_id` varchar(64) NOT NULL COMMENT 'contract_id',
+`contract_no` varchar(64) NOT NULL COMMENT 'contract_no',
+`draw_plan_guid` varchar(64) DEFAULT NULL COMMENT 'draw_plan_guid',
+`biz_month` varchar(20) NOT NULL COMMENT 'biz_month',
+`period_start_date` date NOT NULL COMMENT 'period_start_date',
+`period_end_date` date NOT NULL COMMENT 'period_end_date',
+`period_end_month` varchar(20) DEFAULT NULL COMMENT 'period_end_month',
+`sys_predict_sales` double(11, 2) DEFAULT NULL COMMENT 'sys_predict_sales',
+`operate_predict_sales` double(13, 2) DEFAULT NULL COMMENT 'operate_predict_sales',
+`predict_draw_rent` double(11, 2) DEFAULT NULL COMMENT 'predict_draw_rent',
+`draw_divide_amt` double(11, 2) DEFAULT NULL COMMENT 'draw_divide_amt',
+`period_actual_sales` double(11, 2) DEFAULT NULL COMMENT 'period_actual_sales',
+`draw_rate` varchar(50) DEFAULT NULL COMMENT 'draw_rate',
+`create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'create_time',
+`update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'update_time',
+PRIMARY KEY (`id`) USING BTREE,
+KEY `idx_shop_id` (`shop_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 43444 DEFAULT CHARSET = utf8mb4 COMMENT = 'DEMO TABLE'
